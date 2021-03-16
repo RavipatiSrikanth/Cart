@@ -33,10 +33,13 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 150,
                     width: 150,
-                    child: FadeInImage.assetNetwork(
-                        fit: BoxFit.contain,
-                        placeholder: 'images/',
-                        image: store.products[index].pic),
+                    child: Hero(
+                      tag: store.products[index].id,
+                      child: FadeInImage.assetNetwork(
+                          fit: BoxFit.contain,
+                          placeholder: 'images/',
+                          image: store.products[index].pic),
+                    ),
                   ),
                   Text(store.products[index].name),
                 ],

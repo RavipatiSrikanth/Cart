@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:cart/model/products_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class MyStore extends ChangeNotifier {
@@ -22,7 +25,7 @@ class MyStore extends ChangeNotifier {
           name: "Apple",
           price: 30,
           pic:
-              "https://lh3.googleusercontent.com/proxy/cxKbfPJoyX4XN4o6z2akTlDydFRHnE7Lf3vuleqt6IL-y-6GQi-GFyxDpiCgQBpUn2X621wF1onDG3JMGYB6X_auDW9UGeyIh5_Pr1785Ceio8OO"),
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFpBksCO62ibJZbksv1cFlVzVfPf1IQ9YLVPYSBJRZj-I2RUtPpKTfAdMiK9WcQycUMHw&usqp=CAU"),
       Product(
           id: 3,
           qty: 1,
@@ -110,5 +113,11 @@ class MyStore extends ChangeNotifier {
       total += baskets[i].qty;
     }
     return total;
+  }
+
+  itemTotalPrice(Product itemProduct) {
+    double totalPrice = 0.0;
+    totalPrice = itemProduct.price * itemProduct.qty;
+    return totalPrice;
   }
 }

@@ -40,8 +40,8 @@ class _ProductsPageState extends State<ProductsPage> {
               Hero(
                 tag: store.activeProduct.id,
                 child: FadeInImage.assetNetwork(
-                    width: 150,
-                    height: 150,
+                    width: 300,
+                    height: 300,
                     fit: BoxFit.contain,
                     placeholder: 'images/',
                     image: store.activeProduct.pic),
